@@ -1,0 +1,30 @@
+{
+  "featureLayerDestino": {
+    "titulo": "Validacion Coordenadas",
+    "camposCalculados": {
+      "campoFecha": "Fecha",
+      "campoLatitud": "Latitud",
+      "campoLongitud": "Longitud"
+    },
+    "intersecciones": [
+      {
+        "nombre": "Departamentos",
+        "campoDestino": "Departamento",
+        "tituloCapaFuente": "Departamento",
+        "campoFuente": "NAME"
+      },
+      {
+        "nombre": "Municipios",
+        "campoDestino": "Municipio",
+        "tituloCapaFuente": "Municipio",
+        "campoFuente": "NAME"
+      },
+      {
+        "nombre": "Veredas",
+        "campoDestino": "Vereda",
+        "tituloCapaFuente": "Vereda",
+        "campoFuente": "NOMBRE_VER"
+      }
+    ] 
+  }
+}

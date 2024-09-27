@@ -1,0 +1,105 @@
+﻿<div>
+  <div id="mainDiv" class="mainDiv">
+    <table style="width:100%">
+      <tr>
+        <td>
+          <div>
+            <input data-dojo-attach-point="_formatTypeCheckBox"/>
+            <label>Grados decimales</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="inputDiv" class="panelDiv">
+            <div data-dojo-attach-point="_decimalDegreesContainer" style="display: none;">
+              <div>
+                <table>
+                  <tr>
+                    <td colspan="2">
+                      <label>Latitud:</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td ><div data-dojo-attach-point="_decimalDegreesLatitudeNumberTextBox">Test</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <label>Longitud:</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div data-dojo-attach-point="_decimalDegreesLongitudNumberTextBox">Test</div></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div data-dojo-attach-point="_dMSContainer" >
+              <div id="latitudeDiv">
+                <table>
+                  <tr>
+                    <td colspan="4">
+                      <label>Latitud:</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div data-dojo-attach-point="_latDegreesNumberSpinner"></div></td>
+                    <td><label>°</label></td>
+                    <td><div data-dojo-attach-point="_latMinutesNumberSpinner"></div></td>
+                    <td><label>'</label></td>
+                    <td><div data-dojo-attach-point="_latSecondsNumberSpinner"></div> </td>
+                    <td><label>"</label></td>
+                    <td>
+                      <div data-dojo-attach-point="_latQuadrantSelect"></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="LongitudeDiv" class="active">
+                <table>
+                  <tr>
+                    <td colspan="4">
+                      <label>Longitud: </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div data-dojo-attach-point="_longDegreesNumberSpinner"></div></td>
+                    <td><label>°</label></td>
+                    <td><div data-dojo-attach-point="_longMinutesNumberSpinner"></div></td>
+                    <td><label>'</label></td>
+                    <td><div data-dojo-attach-point="_longSecondsNumberSpinner"></div></td>
+                    <td><label>"</label></td>
+                    <td><div data-dojo-attach-point="_longQuadrantSelect"></div></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <table>
+                <tr>
+                  <td><button data-dojo-attach-point="_locateButton"></button> </td>
+                  <td><button data-dojo-attach-point="_addButton"></button> </td>
+                  <td><button data-dojo-attach-point="_saveButton"></button></td>
+                  <td><button data-dojo-attach-point="_dismissButton"></button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span data-dojo-attach-point="_messageSpan"><br/></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="resultsDiv" class="panelDiv">
+            <div data-dojo-attach-point="_contentDiv">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

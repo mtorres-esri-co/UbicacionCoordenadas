@@ -1,0 +1,22 @@
+﻿.jimu-widget-coordslocator-setting td {
+  margin: 5px;
+  padding: 5px;
+}
+
+  .jimu-widget-coordslocator-setting td.encabezado {
+    text-align: center;
+    font-weight:bolder;
+    padding: 5px;
+    width:1000px;
+  }
+
+  .jimu-widget-coordslocator-setting td.etiqueta {
+    text-align: right;
+    width: 250px;
+  }
+
+  .jimu-widget-coordslocator-setting td.lista {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 750px;
+  }

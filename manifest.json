@@ -1,0 +1,25 @@
+{
+  "name": "UbicacionCoordenadas",
+  "label": "Ubicación de Coordenadas",
+  "2D": true,
+  "3D": false,
+  "platform": "HTML",
+  "version": "2.23",
+  "wabVersion": "2.23",
+  "author": "Esri Colombia",
+  "description": "Ubicación de Coordenadas",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel": true,
+    "hasLocale": false,
+    "hasStyle": true,
+    "hasConfig": true,
+    "hasUIFile": true,
+    "hasSettingPage": true,
+    "hasSettingUIFile": true,
+    "hasSettingLocale": false,
+    "hasSettingStyle": true,
+    "IsController": false
+  }
+}
