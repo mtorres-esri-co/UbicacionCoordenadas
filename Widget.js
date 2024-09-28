@@ -253,7 +253,8 @@
                         var attachmentContentPane = new ContentPane({
                             id: this._parentId + "_attachmentContentPane",
                             name:"attachmentContentPane",
-                            label: "Adjuntos",
+                            style:"display:none",
+                            label: "",
                         });
 
                         var clearAttchmentsButton = new Button({
@@ -282,7 +283,7 @@
                 try {
                     // parser.parse();
                     this.__validationDijits = [];
-                    domAttr.set(this.domNode, 'tabindex', -1);
+                    domAttr.set(this.domNode, 'tabindex', 0);
 
                     this.__latDegreesNumberSpinner = new NumberSpinner({
                         value: 4,
@@ -290,7 +291,7 @@
                         constraints: { min: 0, max: 89, places: 0 },
                         selectOnClick: true,
                         required: true,
-                        tabIndex: 1,
+                        tabIndex: 2,
                         style:"width:65px"
                     }, this._latDegreesNumberSpinner);
                     this.__latDegreesNumberSpinner.startup();
@@ -302,7 +303,7 @@
                         constraints: { min: 0, max: 59, places: 0 },
                         selectOnClick: true,
                         required: true,
-                        tabIndex: 2,
+                        tabIndex: 3,
                         style: "width:65px"
                     }, this._latMinutesNumberSpinner);
                     this.__latMinutesNumberSpinner.startup();
@@ -314,7 +315,7 @@
                         constraints: { min: 0, max: 59, places: 2 },
                         selectOnClick: true,
                         required: true,
-                        tabIndex: 3,
+                        tabIndex: 4,
                         style: "width:85px"
                     }, this._latSecondsNumberSpinner);
                     this.__latSecondsNumberSpinner.startup();
@@ -322,7 +323,7 @@
 
                     this.__latQuadranteSelect = new Select({
                         name: "latitudeQuadrant",
-                        tabIndex: 4,
+                        tabIndex: 5,
                         options: [
                             { label: "N", value: "N", selected: true },
                             { label: "S", value: "S" }
@@ -336,7 +337,7 @@
                         constraints: { min: 0, max: 179, places: 0 },
                         selectOnClick: true,
                         required: true,
-                        tabIndex: 5,
+                        tabIndex: 6,
                         style: "width:65px"
                     }, this._longDegreesNumberSpinner);
                     this.__longDegreesNumberSpinner.startup();
@@ -348,7 +349,7 @@
                         constraints: { min: 0, max: 59, places: 0 },
                         selectOnClick: true,
                         required: true,
-                        tabIndex: 6,
+                        tabIndex: 7,
                         style: "width:65px"
                     }, this._longMinutesNumberSpinner);
                     this.__longMinutesNumberSpinner.startup();
@@ -360,7 +361,7 @@
                         constraints: { min: 0, max: 59, places: 2 },
                         selectOnClick: true,
                         required: true,
-                        tabIndex: 7,
+                        tabIndex: 8,
                         style: "width:85px"
                     }, this._longSecondsNumberSpinner);
                     this.__longSecondsNumberSpinner.startup();
@@ -368,7 +369,7 @@
 
                     this.__longQuadranteSelect = new Select({
                         name: "longitudeQuadrant",
-                        tabIndex: 8,
+                        tabIndex: 9,
                         options: [
                             { label: "E", value: "E" },
                             { label: "W", value: "W", selected: true }
@@ -379,6 +380,7 @@
                     this.__locateButton = new Button({
                         label: "Ubicar",
                         showLabel: true,
+                        tabIndex: 12,
                         onClick: lang.hitch(this, this._locateCoordinates)
                     }, this._locateButton);
                     this.__locateButton.startup();
@@ -386,6 +388,7 @@
                     this.__addButton = new Button({
                         label: "Agregar",
                         showLabel: true,
+                        tabIndex: 13,
                         onClick: lang.hitch(this, this._addCoordsLocation)
                     }, this._addButton);
                     this.__addButton.startup();
@@ -394,6 +397,7 @@
                     this.__saveButton = new Button({
                         label: "Guardar",
                         showLabel: true,
+                        tabIndex: 14,
                         onClick: lang.hitch(this, this._saveLocation)
                     }, this._saveButton);
                     this.__saveButton.startup();
@@ -402,12 +406,14 @@
                     this.__dismissButton = new Button({
                         label: "Descartar",
                         showLabel: true,
+                        tabIndex: 15,
                         onClick: lang.hitch(this, this._dismissLocation)
                     }, this._dismissButton);
                     this.__dismissButton.startup();
                     this.__dismissButton.setDisabled(true);
 
                     this.__formatTypeCheckBox = new CheckBox({
+                        tabIndex: 1,
                         checked: false,
                         value: "Grados decimales",
                         onChange: lang.hitch(this, this._changeformat)
@@ -418,6 +424,7 @@
                     this.__decimalDegreesLatitudeNumberTextBox = new NumberTextBox({
                         name:"latDD",
                         value: 4,
+                        tabIndex: 10,
                         constraints: {
                             pattern: '#####0.##########',
                             min:-90,
@@ -429,6 +436,7 @@
                     this.__decimalDegreesLongitudNumberTextBox = new NumberTextBox({
                         name:"lonDD",
                         value: -74,
+                        tabIndex: 11,
                         constraints: {
                             pattern: '#####0.##########',
                             min:-180,
